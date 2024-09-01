@@ -12,7 +12,7 @@ void main() async {
   // Initialize Hive with the application documents directory
   Hive.init(dir.path);
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const HomeScreen(),
+    return const MaterialApp(
+      home: HomeScreen(),
     );
   }
 }
@@ -79,10 +79,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
         backgroundColor: Colors.blue, // Set the background color to blue
       ),
-      body: Center(
+      body: const Center(
         child: Text('Home Page'),
       ),
       floatingActionButton: FloatingActionButton(
@@ -93,7 +93,7 @@ class HomePage extends StatelessWidget {
             MaterialPageRoute(builder: (context) => const AddExercise()),
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -104,7 +104,7 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Search Page'),
     );
   }
@@ -115,7 +115,7 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Profile Page'),
     );
   }
